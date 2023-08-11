@@ -53,10 +53,10 @@ class OpenMeteoApiClient {
     required double latitude,
     required double longitude,
   }) async {
-    final weatherRequest = Uri.http(_baseUrlWeather, 'v1/forecast', {
-      'latitude': latitude,
-      'longitude': longitude,
-      'current_weather': true,
+    final weatherRequest = Uri.https(_baseUrlWeather, 'v1/forecast', {
+      'latitude': '$latitude',
+      'longitude': '$longitude',
+      'current_weather': 'true'
     });
     final weatherResponse = await _httpClient.get(weatherRequest);
     if (weatherResponse.statusCode != 200) throw WeatherRequestFailure();
