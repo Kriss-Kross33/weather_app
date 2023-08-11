@@ -3,8 +3,6 @@ import 'package:mocktail/mocktail.dart';
 import 'package:open_meteo_api/open_meteo_api.dart';
 import 'package:test/test.dart';
 
-import 'lol.dart';
-
 class MockClient extends Mock implements http.Client {}
 
 class MockResponse extends Mock implements http.Response {}
@@ -108,6 +106,8 @@ void main() {
     });
 
     group('getWeather', () {
+      const latitude = 41.85003;
+      const longitude = -87.6500;
       test('make a valid http request', () async {
         const latitude = 41.85003;
         const longitude = -87.6500;
