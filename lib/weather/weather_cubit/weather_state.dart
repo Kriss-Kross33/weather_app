@@ -45,5 +45,3 @@ final class WeatherState extends Equatable {
         temperatureUnits,
       ];
 }
-
-final class WeatherInitial extends WeatherState {}

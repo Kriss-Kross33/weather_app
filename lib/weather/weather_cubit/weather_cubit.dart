@@ -56,7 +56,7 @@ class WeatherCubit extends HydratedCubit<WeatherState> {
     }
   }
 
-  void toogleUnits() {
+  void toggleUnits() {
     final units = state.temperatureUnits.isFahrenheit
         ? TemperatureUnits.celsius
         : TemperatureUnits.fahrenheit;
