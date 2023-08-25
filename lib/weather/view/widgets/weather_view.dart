@@ -42,14 +42,14 @@ class _WeatherViewState extends State<WeatherView> {
           listener: (context, state) {},
           builder: (context, state) {
             return switch (state.status) {
-              WeatherStatus.initial => const _WeatherEmpty(),
-              WeatherStatus.loading => const _WeatherLoading(),
-              WeatherStatus.success => _WeatherLoaded(
+              WeatherStatus.initial => const WeatherEmpty(),
+              WeatherStatus.loading => const WeatherLoading(),
+              WeatherStatus.success => WeatherLoaded(
                   weather: state.weather,
                   units: state.temperatureUnits,
                   onRefresh: () async {},
                 ),
-              WeatherStatus.failure => const _WeatherError(),
+              WeatherStatus.failure => const WeatherError(),
             };
           },
         ),
