@@ -1,7 +1,8 @@
 part of 'weather_view.dart';
 
-class _WeatherLoaded extends StatelessWidget {
-  const _WeatherLoaded({
+class WeatherLoaded extends StatelessWidget {
+  const WeatherLoaded({
+    super.key,
     required this.weather,
     required this.units,
     required this.onRefresh,
