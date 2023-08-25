@@ -1,7 +1,7 @@
 part of 'weather_view.dart';
 
-class _WeatherError extends StatelessWidget {
-  const _WeatherError();
+class WeatherError extends StatelessWidget {
+  const WeatherError({super.key});
 
   @override
   Widget build(BuildContext context) {
